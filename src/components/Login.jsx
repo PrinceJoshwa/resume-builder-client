@@ -3,7 +3,7 @@ import React from 'react';
 
 function Login() {
 const handleLogin = () => {
-  const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://resume-builder-client-jade.vercel.app';
+  const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://resume-builder-server-roan.vercel.app';
   window.location.href = `${baseURL}/auth/google`;
 };
 
