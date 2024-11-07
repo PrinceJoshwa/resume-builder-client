@@ -91,13 +91,15 @@
 
 
 
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Login() {
   const handleGoogleLogin = () => {
-    const baseURL = 'https://resume-builder-server-roan.vercel.app'; // Backend URL
+    // Use dynamic URL based on environment
+    const baseURL = process.env.NODE_ENV === 'production'
+      ? 'https://resume-builder-server-roan.vercel.app'
+      : 'http://localhost:5000';
     window.location.href = `${baseURL}/auth/google`;
   };
 
