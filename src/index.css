@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,7 +70,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-:root{
+/* :root{
   background-color: #242424;
   color: #ffff;
 
@@ -83,4 +87,4 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   color: azure;
-}
+} */
