@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom';
 
 function Login() {
   const handleGoogleLogin = () => {
-    const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://vercel.com/prince-joshwa-ss-projects/resume-builder-server';
+    const baseURL = import.meta.env.VITE_API_BASE_URL || 'https://resume-builder-server-roan.vercel.app';
     window.location.href = `${baseURL}/auth/google`;
   };
 
