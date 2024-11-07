@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: process.env.REACT_APP_BACKEND_URL,  // Backend URL
+        target: process.env.VITE_API_BASE_URL,  // Backend URL
         changeOrigin: true,
         secure: false,
       },
