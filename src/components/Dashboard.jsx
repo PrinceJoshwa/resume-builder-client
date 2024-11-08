@@ -41,37 +41,13 @@
 
 
 
-
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 function Dashboard() {
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_BASE_URL || 'https://resume-builder-server-roan.vercel.app'}/auth/status`, {
-      credentials: 'include'
-    })
-      .then(response => {
-        if (response.status === 401) {
-          navigate('/');
-        } else {
-          return response.json();
-        }
-      })
-      .then(data => {
-        if (data) setUser(data);
-      })
-      .catch(error => console.error('Error:', error));
-  }, [navigate]);
-
-  return user ? (
-    <div>
-      <h1>Welcome, {user.name}</h1>
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <h1 className="text-3xl font-bold">Welcome to your Dashboard!</h1>
     </div>
-  ) : (
-    <p>Loading...</p>
   );
 }
 
